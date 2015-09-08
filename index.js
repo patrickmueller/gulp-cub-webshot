@@ -1,6 +1,6 @@
 var gutil = require('gulp-util');
 var through = require('through2');
-var webshot = require('webshot');
+var webshot = require('cub-webshot');
 var path = require("path");
 var connect = require("connect");
 var serveStatic = require('serve-static');
