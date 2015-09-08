@@ -31,11 +31,13 @@ gulp.task('webshot', function() {
 			dest:'.tmp/screenshot/',
 			root:'dist',
 			takeShotOnCallback: true,
-			onCallback: function(data) {},
+			onCallback: function(){},
 		}
 	));
 })
 ```
+
+This task loops all html-files in the folder dist and creates a screenshot if there is a callBack function in the html-file.
 
 ## License
 
