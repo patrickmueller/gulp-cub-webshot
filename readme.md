@@ -11,15 +11,31 @@ Use the callBack function on client-side to trigger a screenshot:
 if (typeof(window.callPhantom) === 'function') {
 	window.callPhantom('takeShot');
 }
-});
+```
 
-Close the session with:
+And close the session with:
 
 ```javascript
 if (typeof(window.callPhantom) === 'function') {
 	window.callPhantom('lastShot');
 }
-});
+```
+
+
+Create a gulp-task like this:
+
+```javascript
+gulp.task('webshot', function() {
+	return gulp.src('dist/*.html')
+		.pipe($.cubWebshot({
+			dest:'.tmp/screenshot/',
+			root:'dist',
+			takeShotOnCallback: true,
+			onCallback: function(data) {},
+		}
+	));
+})
+```
 
 ## License
 
