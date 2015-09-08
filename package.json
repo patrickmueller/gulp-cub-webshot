@@ -1,5 +1,5 @@
 {
-  "name": "gulp-webshot",
+  "name": "gulp-cub-webshot",
   "version": "0.1.4",
   "description": "A modiefied Version of Ayhan Kuru's gulp-webshot.",
   "main": "index.js",
